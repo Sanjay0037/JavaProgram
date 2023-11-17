@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;	
+}
+body{
+    font-size: 17px;
+    background-color: #f2f2fb;
+    text-size-adjust: auto;
+    }
+.header{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 65px;
+    background-color:rgba(68, 68, 129, 0.9);
+    border-bottom-style:inherit;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 15px dimgray;
+    border-radius: 0px 2%	 2%  10%   ;
+}
+.information{
+    margin-top: 10%;
+    margin-bottom: 35%;
+}
+
+/* drop down menu---------------------------------------------------- */
+.menu {
+    display: grid;
+    grid-template-rows: 50px max-content;
+    gap: 10px;
+}
+.toggle {
+    all: unset;
+    width: 100px;
+    margin-top: 17%;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.list {
+    background-color: white;
+    font-size: 18px;
+    list-style: none;
+    display: grid;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: 0.4s;
+}
+.list-item:hover {
+    background-color:rgba(190, 185, 185, 0.349);	
+}
+.toggle:focus ~ .list {
+    height: 150px;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+    
+}
+.toggle:focus ~ .list .list-item {
+    transform: translateX(0);
+}
+.sidebar_icon{
+    margin-left: 3%;
+    position: absolute;
+    margin-top: -2.7%;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* end--------------------------------------------------------------------------------- */
+.h1{
+    color:white;
+    font-size: 26px;
+    position: absolute;
+    margin: 19px 0px 0px 50px;	
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+display: flex;
+justify-content: center;
+align-items: stretch;
+float: center;
+}
+#search{
+    margin-top: 8%;
+    margin-left: -65%;
+    position: relative;
+    border: none;
+    width: 250%;
+    padding: 5% 0 5% 0;
+    text-indent: 20px;
+    font-size: 16px;
+    border-radius:  15in ;
+}
+input[type="search"]::placeholder {
+color: #bbb;
+}
+.sidebar_icon{
+    margin-left: 1%;
+    position: absolute;
+    margin-top: -2.8%;
+    font-size: 30px;
+    cursor: pointer;
+}
+.login_menu{
+    float: right;
+    font-size: 30px;
+    margin-right: 2%;
+    margin-top: -2%;
+    cursor:pointer;
+    transform: rotate(90deg);
+    
+}              
+
+
+h2{
+    font-size: 27px;
+    text-decoration-thickness: inherit;
+}
+#logo{
+    position: relative;
+    display: inline;
+    margin-top: 10%;
+  height: 30px;
+  width: 35px;
+}
+
+#right-sec{
+    width: 75%;
+    float: right;
+    display: inline;
+    margin-right: 12%;
+    margin-top: .1%;	
+   margin-bottom: 10%;
+   background-color: rgba(214, 212, 212, 0.2)    ;
+   
+}
+/* change here..................................... */
+#content,#programs{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family:Arial, Helvetica, sans-serif;
+    word-spacing: 4px;
+    text-align: justify;	
+}
+pre{
+    position: relative;
+    color: white;
+    width: 100%;
+    margin:1rem 0;
+    margin-bottom: 2.5%;
+    background-color: rgb(43, 43, 43);
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-end-end-radius:5px;
+    border-top-right-radius: 5px;
+    border-radius: 0.5cqmax;
+    overflow-y: auto;
+}
+
+pre > button
+{
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top:5px;
+}
+pre code{
+    margin-top: -1.5rem;
+    margin-left: -6.7rem;
+    display: block;
+    line-height: 1.5rem;
+    font-size: 17px;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji";
+    font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    word-wrap: normal;
+}
+.output{
+    padding-left: 5%;
+    margin-bottom: 25%;
+    padding-top: 10px;
+    padding-bottom:10px;
+    border-left: 5px solid rgb(53, 52, 93);
+    background-color:  rgb(233, 233, 234);
+    border-end-end-radius:5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+li{
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+/* copyclipboard                */
+.copy {
+    cursor: pointer;
+    padding: 5px 13px 5px 13px;
+    margin-bottom: -5%;
+    display:inline;
+    border-radius: 5px 5px 10px 1px ;
+  }
+.copy.copied {
+    padding: 5px 7px 5px 7px;
+  }
+

@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyPrograms</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="iStyle.css">
+        
+    </head>
+<body>
+
+    <div class="header">
+        <h1 class="h1">Notesa</h1>
+            <div class="container">
+            <form class="search">
+              <input id="search" type="search" placeholder="Search">
+            </form>
+        </div>
+    
+        <!-- drop down -------------------------------------------------- -->
+        <span class="sidebar_icon">
+            <div class="menu">
+                <button class="toggle">≡</button>
+                <span class="list">
+                    <a href="index.html">Basic Programs 139</a>
+                    <a href="myprograms.html">MyPrograms</a>
+                    
+                </span>
+              </div>
+            </span>
+      <!-- end------------------------------------------------------------ -->
+            
+        
+        <span class="login_menu">:)</span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="body_content" id="">
+
+        <section id="left-sec">
+
+        </section>
+    
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+            <br>
+            <br>
+            <h2>My Assigned Programs</h2>
+        <br><br>
+       <br><br>
+
+
+
+       <section id="programs">
+        <ol>
+<!-- 1 -->
+<li>Write a Java program to count word in file.
+    <pre class="code" >
+        <code>
+            import java.io.BufferedReader;  
+            import java.io.FileReader;  
+            
+            class CountWordFile  
+            {  
+                public static void main(String[] args) throws Exception {  
+                    String line;  
+                    int count = 0;  
+            
+                    //Opens a file in read mode  
+                    FileReader file = new FileReader("data.txt ");  
+                    BufferedReader br = new BufferedReader(file);  
+            
+                    //Gets each line till end of file is reached  
+                    while((line = br.readLine()) != null) {  
+                        //Splits each line into words  
+                        String words[] = line.split("");  
+                        //Counts each word  
+                        count = count + words.length;  
+            
+                    }  
+  
+            System.out.println("Number of words present in given file: " + count);  
+             br.close();  
+    }  
+}  
+    </code>
+</pre>
+<div class="output">
+    Number of words present in given file: 11
+</div>
+</li>
+<!-- 2 -->
+<li>Write a Java program to Reverse the String.
+    <pre class="code">
+        <code>
+            class ReverseString {
+                public static String reverseString(String str) {
+                    StringBuilder sb = new StringBuilder(str);
+                    sb.reverse();
+                    return sb.toString();
+                }
+            
+                public static void main(String[] args) {
+                    String str = "Hello, World!";
+                    String reversedStr = reverseString(str);
+            
+                    System.out.println("The original string is: " + str);
+                    System.out.println("The reversed string is: " + reversedStr);
+                }
+            }        
+        </code>
+    </pre>
+    <div class="output">
+        The original string is: Hello, World!<br>
+        The reversed string is: !dlroW ,olleH 
+    </div>
+
+</li>
+<!-- 3 -->
+<li>Write a Java program Transpose the matrix.
+    <pre class="code">
+        <code>
+            import java.util.Scanner;
+    
+            public class TransposeMatrix {
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+            
+                    System.out.println
+                    ("Enter the number of rows and columns of the matrix: ");
+                    int rows = scanner.nextInt();
+                    int columns = scanner.nextInt();
+            
+                    int[][] originalMatrix = new int[rows][columns];
+                    int[][] transposeMatrix = new int[columns][rows];
+            
+                    System.out.println("Enter the elements of the matrix: ");
+                    for (int i = 0; i < rows; i++) {
+                        for (int j = 0; j < columns; j++) {
+                            originalMatrix[i][j] = scanner.nextInt();
+                        }
+                    }
+            
+                    // Transpose the matrix.
+                    for (int i = 0; i < rows; i++) {
+                        for (int j = 0; j < columns; j++) {
+                            transposeMatrix[j][i] = originalMatrix[i][j];
+                        }
+                    }
+            
+                    // Print the transpose matrix.
+                    System.out.println("The transpose of the matrix is: ");
+                    for (int i = 0; i < columns; i++) {
+                        for (int j = 0; j < rows; j++) {
+                            System.out.print(transposeMatrix[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+                }
+            }
+            
+       </code>
+    </pre>
+    <div class="output">
+        Enter the number of rows and columns of the matrix: <br>
+3<br>
+3<br>
+Enter the elements of the matrix:<br>
+5<br>
+6<br>
+8<br>
+5<br>
+4<br>
+5<br>
+8<br>
+7<br>
+6<br>
+The transpose of the matrix is:<br>
+5 5 8<br>
+6 4 7<br>
+8 5 6<br>
+    </div>
+</li> 
+<!-- 4 -->
+<li> Write a Java program to calculate volume of cone.
+    <pre class="code">
+        <code>
+             
+            
+            class ConeVolumeCalculator {
+                
+                public static double calculateVolume(double radius, double height) {
+                    return (Math.PI * radius * radius * height) / 3;
+                }
+
+                public static void main(String[] args) {
+
+                    
+                    double radius = 5;
+                    double height = 10;
+
+                    // Calculate the volume of the cone using the method
+                    double volume = calculateVolume(radius, height);
+
+                    // Print the volume to the console
+                    System.out.println("The volume of the cone is: " + volume);
+                }
+            }
+        </code>
+    </pre>
+    <div class="output">
+        The volume of the cone is: 261.79938779914943         
+    </div>
+</li>   
+<!-- 5 -->
+<li> Write a Java program display choice.
+    <pre class="code">
+        <code>
+            import java.awt.*;    
+            import java.awt.event.*;  
+              
+             class ChoiceExample2 {  
+              
+                  // class constructor    
+                    ChoiceExample2() {    
+              
+                    // creating a frame  
+                    Frame f = new Frame();    
+              
+                    // creating a final object of Label class  
+                    final Label label = new Label();   
+              
+                    // setting alignment and size of label component           
+                    label.setAlignment(Label.CENTER);    
+                    label.setSize(400, 100);   
+              
+                    // creating a button   
+                    Button b = new Button("Show");   
+              
+                    // setting the bounds of button   
+                    b.setBounds(200, 100, 50, 20);    
+              
+                    // creating final object of Choice class  
+                    final Choice c = new Choice();    
+              
+                    // setting bounds of choice menu  
+                    c.setBounds(100, 100, 75, 75);   
+              
+                    // adding 5 items to choice menu   
+                    c.add("C");    
+                    c.add("C++");    
+                    c.add("Java");    
+                    c.add("PHP");    
+                    c.add("Android");   
+              
+                    // adding above components into the frame   
+                    f.add(c);  
+                    f.add(label);  
+                    f.add(b);    
+              
+                    // setting size, layout and visibility of frame  
+                    f.setSize(400, 400);    
+                    f.setLayout(null);    
+                    f.setVisible(true);    
+              
+                    // adding event to the button  
+                    // which displays the selected item from the list when button is clicked  
+                    b.addActionListener(new ActionListener() {    
+                        public void actionPerformed(ActionEvent e) {         
+                     String data = "Programming language Selected: "+ c.getItem(c.getSelectedIndex());    
+                     label.setText(data);    
+                    }    
+                    });             
+                    }    
+              
+            // main method  
+            public static void main(String args[])    
+            {    
+               new ChoiceExample2();    
+            }    
+            }
+      </code>
+    </pre>
+    <div class="output">
+        <img src="output.png" alt="" height="40%" width="50%">
+    </div>
+</li>    
+
+<br><br><br><br>
+        </ol>
+    </section>  
+
+    <script src="./iFunctions.js"></script>
+</body>
+</html>
